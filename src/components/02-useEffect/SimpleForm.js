@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Message } from './Message';
 import './effects.css';
 
 export const SimpleForm = () => {
@@ -11,20 +12,16 @@ export const SimpleForm = () => {
 
     useEffect(() => {
 
-        console.log('heyyy');
-
-
     },[]);
     useEffect(() => {
 
-        console.log('formulario cambio');
 
 
     },[formState]);
 
     useEffect(() => {
+      // el retunn dentro del useEffect es para realizar un tipo de limpieza
 
-        console.log('email cambio');
 
 
     },[email]);
@@ -63,6 +60,7 @@ export const SimpleForm = () => {
         value={email}
         onChange={ handleInputChange}/>
     </div>
+    {(name==='123') && <Message/>}
     </>
   )
 }
